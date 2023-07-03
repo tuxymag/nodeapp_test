@@ -5,7 +5,10 @@ metadata:
   labels:
     app: nodeapp
 spec:
-  replicas: 1
+  replicas: 3
+  strategy:
+    rollingUpdate:
+      maxUnavailable: 1
   selector:
     matchLabels:
       app: nodeapp

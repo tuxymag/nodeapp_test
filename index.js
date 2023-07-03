@@ -4,7 +4,7 @@ var express = require('express');
 var app = express();
 
 app.get('/', function (req, res) {
-    res.send('{ "response": "Hello From Magin George - Tools -- Rolling Change new hello" }');
+    res.send('{ "response": "Hello From Magin George - Tools -- Rolling Change a new begining" }');
 });
 
 app.get('/will', function (req, res) {

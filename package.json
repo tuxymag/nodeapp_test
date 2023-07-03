@@ -4,11 +4,17 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
-    "express": "4.17.1"
+    "express": "4.17.1",
+    "@opentelemetry/instrumentation-http",
+    "@opentelemetry/resources",
+    "@opentelemetry/sdk-trace-node",
+    "@opentelemetry/api",
+    "@opentelemetry/exporter-jaeger",
+    "opentelemetry-instrumentation-express"
   },
   "devDependencies": {
     "mocha": "9.1.1",
-    "supertest": "6.1.6"
+    "supertest": "6.1.6",
   },
   "scripts": {
     "start": "node index.js",

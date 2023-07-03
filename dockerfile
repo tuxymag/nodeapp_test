@@ -4,6 +4,8 @@ WORKDIR /usr/src/app
 
 RUN npm install --save @opentelemetry/api
 RUN npm install --save @opentelemetry/sdk-trace-node
+RUN npm install --save @opentelemetry/instrumentation-http
+RUN npm install --save @opentelemetry/exporter-jaeger
 
 COPY package.json ./
 

@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nodeserver
-        image: tuxymag/nodeapp:latest
+        image: tuxymag/nodeapp:VERSION
         imagePullPolicy: Always
         ports:
         - containerPort: 3000

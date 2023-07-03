@@ -1,5 +1,5 @@
 //const tracer = require("./tracing")("Magin-service");
-
+const path = require('path');
 var express = require('express');
 var app = express();
 

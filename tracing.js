@@ -8,7 +8,6 @@ const { trace } = require("@opentelemetry/api");
 const { JaegerExporter } = require("@opentelemetry/exporter-jaeger");
 //instrumentations
 const { ExpressInstrumentation } = require("opentelemetry-instrumentation-express");
-const { MongoDBInstrumentation } = require("@opentelemetry/instrumentation-mongodb");
 const { HttpInstrumentation } = require("@opentelemetry/instrumentation-http");
 const { registerInstrumentations } = require("@opentelemetry/instrumentation");
 
@@ -26,7 +25,9 @@ module.exports = (serviceName) => {
  provider.register();
  registerInstrumentations({
    instrumentations: [
-     new HttpInstrumentation()
+     new HttpInstrumentation(),
+     new ExpressInstrumentation()
+     
    ],
    tracerProvider: provider,
  });
